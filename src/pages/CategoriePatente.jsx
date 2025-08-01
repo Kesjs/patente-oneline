@@ -325,13 +325,7 @@ const CategoriePatente = () => {
             ))}
           </div>
 
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 text-center animate-bounce z-10">
-            <p className="text-xs sm:text-sm font-medium text-blue-200 mb-1 sm:mb-2">Scorri per scoprire</p>
-            <div className="w-6 h-10 sm:w-8 sm:h-12 border-2 border-blue-300/80 rounded-full flex justify-center mx-auto">
-              <div className="w-0.5 sm:w-1 h-2 sm:h-3 bg-blue-300/80 rounded-full mt-2"></div>
-            </div>
-          </div>
+        
         </div>
       </header>
 

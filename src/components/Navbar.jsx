@@ -124,19 +124,30 @@ export default function Navbar() {
           
           {/* Mobile menu button */}
           <button 
-            className="md:hidden flex items-center px-3 py-2 border rounded text-blue-700 border-blue-700" 
+            className="md:hidden flex flex-col items-center justify-center w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition-all duration-300 focus:outline-none group border border-gray-300"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
-            <i className={`fas fa-${isOpen ? 'times' : 'bars'}`}></i>
+            <span className={`block w-6 h-0.5 bg-gray-800 mb-1.5 transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-gray-800 transition-all duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+            <span className={`block w-6 h-0.5 bg-gray-800 mt-1.5 transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
           </button>
         </div>
         
       </div>
       
       {/* Mobile menu */}
-      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-4 py-4 bg-white shadow-lg">
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            className="md:hidden bg-white shadow-xl rounded-b-lg overflow-hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className="px-4 py-3">
           <ul className="space-y-3 font-semibold">
             {navLinks.map((link) => (
               <li key={`mobile-${link.name}`}>
@@ -163,9 +174,11 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-          </ul>
-        </div>
-      </div>
+              </ul>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
