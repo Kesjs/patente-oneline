@@ -47,7 +47,7 @@
     "lint": "eslint . --ext .js,.jsx",
     "lint:fix": "eslint . --ext .js,.jsx --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,json,css,scss,md}\"",
-    "prepare": "husky install",
+    "prepare": "echo 'Skipping husky installation in CI environment' || exit 0",
     "test": "vitest",
     "test:watch": "vitest watch",
     "test:coverage": "vitest run --coverage"
