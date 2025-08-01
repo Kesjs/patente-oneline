@@ -1,0 +1,81 @@
+{
+  "name": "patente-di-guida-autentica",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Application web pour l'obtention de permis de conduire authentiques",
+  "keywords": [
+    "permis de conduire",
+    "patente",
+    "auto-école",
+    "révision",
+    "code de la route"
+  ],
+  "author": "Votre Nom <contact@votredomaine.com>",
+  "license": "MIT",
+  "homepage": "https://www.patenteautentica.it",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/votre-utilisateur/patente-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/votre-utilisateur/patente-react/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "preview:prod": "vite preview --port 3016 --host",
+    "analyze": "vite build --mode analyze",
+    "lint": "eslint . --ext .js,.jsx",
+    "lint:fix": "eslint . --ext .js,.jsx --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,json,css,scss,md}\"",
+    "prepare": "husky install",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.0",
+    "@heroicons/react": "^2.2.0",
+    "clipboard": "^2.0.11",
+    "framer-motion": "^12.23.12",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^7.7.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "postcss": "^8.4.31",
+    "rollup-plugin-visualizer": "^6.0.3",
+    "tailwindcss": "^3.4.1",
+    "vite": "^7.0.4",
+    "vite-plugin-pwa": "^1.0.2"
+  }
+}

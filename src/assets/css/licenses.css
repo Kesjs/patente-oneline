@@ -1,0 +1,164 @@
+/* License Card Styles */
+.license-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.license-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.license-card .card-image {
+  height: 210px;
+  overflow: hidden;
+  position: relative;
+}
+
+.license-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.license-card:hover img {
+  transform: scale(1.05);
+}
+
+.license-card .card-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.license-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.license-card .card-subtitle {
+  color: #4a5568;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.license-card .card-description {
+  color: #4a5568;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.license-card .card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.license-card .price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.license-card .price span {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #718096;
+  text-decoration: line-through;
+  margin-left: 0.5rem;
+}
+
+.license-card .btn-license {
+  background: #3182ce;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.license-card .btn-license:hover {
+  background: #2c5282;
+  transform: translateY(-1px);
+}
+
+/* Featured License Card */
+.license-card.featured {
+  border: 2px solid #3182ce;
+  position: relative;
+  overflow: visible;
+}
+
+.license-card.featured::before {
+  content: 'POPOLARE';
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #3182ce;
+  color: white;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .license-card .card-image {
+    height: 180px;
+  }
+  
+  .license-card .card-content {
+    padding: 1.25rem;
+  }
+  
+  .license-card .card-title {
+    font-size: 1.125rem;
+  }
+  
+  .license-card .card-description {
+    font-size: 0.875rem;
+  }
+}
+
+/* Animation for license cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.license-card {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.license-card:nth-child(1) { animation-delay: 0.1s; }
+.license-card:nth-child(2) { animation-delay: 0.2s; }
+.license-card:nth-child(3) { animation-delay: 0.3s; }
+.license-card:nth-child(4) { animation-delay: 0.4s; }
+.license-card:nth-child(5) { animation-delay: 0.5s; }
