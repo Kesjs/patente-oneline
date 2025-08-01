@@ -42,7 +42,7 @@ export default defineConfig(({ mode }) => ({
   ].filter(Boolean),
   
   // Base public path when served in production
-  base: './',
+  base: '/',
   
   // Build configuration
   build: {
